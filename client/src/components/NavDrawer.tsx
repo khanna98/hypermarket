@@ -202,10 +202,10 @@ const NavDrawer = ({ toggleDrawer, toggle }: any) => {
             <ListItemIcon>
               <HomeIcon />
             </ListItemIcon>
-            <ListItemText primary={"Home"} className="text-black" />
+            <ListItemText primary={"Home / Market"} className="text-black" />
           </ListItem>
         </NavLink>
-        <NavLink exact to={MARKET_LANDING} style={{ textDecoration: "none" }}>
+        {/* <NavLink exact to={MARKET_LANDING} style={{ textDecoration: "none" }}>
           <ListItem
             button
             key={"market-landing"}
@@ -216,7 +216,7 @@ const NavDrawer = ({ toggleDrawer, toggle }: any) => {
             </ListItemIcon>
             <ListItemText primary={"Market"} className="text-black" />
           </ListItem>
-        </NavLink>
+        </NavLink> */}
       </List>
     </div>
   );
