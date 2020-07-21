@@ -147,5 +147,40 @@ export const buyProcess = (details: any, data: any, bills: IBills) => async (
   }
 };
 
+export const fakeBuyProcess = (details: any, data: any, bills: IBills) => async (
+  dispatch: Function,
+  getState: Function
+) => {
+  try {
+    // Page Loading signal
+    dispatch({ type: BUY_PROCESS_LOADING });
+
+    // Axios Body
+    const body = {
+      details,
+      data,
+      cart: getState().cart.items,
+      contactDetails: getState().auth.user.contactDetails,
+      bills,
+    };
+    // Axios Config
+    const config = {
+      headers: {
+        "content-type": "application/json",
+        authorization: `Bearer ${getState().auth.token}`,
+      },
+    };
+
+    await axios.post("/api/users/cart/buyProcessDone", body, config);
+
+    // Success
+    dispatch({ type: BUY_PROCESS_SUCCESS });
+    dispatch(loadCart());
+  } catch (err) {
+    dispatch(returnErrors(err.response.data, err.response.status));
+    dispatch({ type: BUY_PROCESS_FAIL });
+  }
+}
+
 export const cleanBuyProcessState = () => (dispatch: Function) =>
   dispatch({ type: BUY_PROCESS_CLEAN });

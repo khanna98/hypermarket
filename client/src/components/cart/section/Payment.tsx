@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from "react";
 import PaypalButton from "../../utils/Paypal";
-import { Paper, FormControl, Radio, FormControlLabel } from "@material-ui/core";
+import { Paper, FormControl, Radio, FormControlLabel, Button } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
-import { buyProcess } from "../../../context/actions/CartAction";
+import { buyProcess, fakeBuyProcess } from "../../../context/actions/CartAction";
 import { IPayment, IUserShippingDetailsBody } from "../../../types/interfaces";
 import { RootState } from "../../../context/store";
 
@@ -30,6 +30,10 @@ const Payment = ({ bills }: IPayment) => {
     user.contactDetails,
   ]);
 
+  const fakeSuccess = (details: any, data: any) => {
+    dispatch(fakeBuyProcess(details, data, bills))
+  }
+
   const onSuccess = (details: any, data: any) =>
     dispatch(buyProcess(details, data, bills));
   return (
@@ -55,7 +59,7 @@ const Payment = ({ bills }: IPayment) => {
           </FormControl>
           {/* Option button end */}
           <div className="mx-auto w-2/3 relative z-0">
-            <PaypalButton amount={bills.totalPayment} onSuccess={onSuccess} />
+            <PaypalButton amount={bills.totalPayment.toFixed(2)} onSuccess={onSuccess} />
           </div>
         </div>
       ) : (

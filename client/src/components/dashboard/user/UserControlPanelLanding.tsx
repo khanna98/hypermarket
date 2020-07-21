@@ -148,14 +148,14 @@ const UserControlPanelLanding = () => {
                 Create User
               </Button>
             </NavLink>
-            <Button
+            {/* <Button
               variant="outlined"
               color="secondary"
               className="mr-3"
               onClick={handleDialogIsOpen}
             >
               Filter
-            </Button>
+            </Button> */}
           </div>
 
           {/* Content */}

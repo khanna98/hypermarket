@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { CREATE_PRODUCT, PRODUCT_CONTROL_PANEL } from "../../../path";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../context/store";
-import { getProducts } from "../../../context/actions/ProductAction";
+import { getProducts, deleteProductById } from "../../../context/actions/ProductAction";
 import { DateFormatter, CurrencyFormatter } from "../../../utils/Formatter";
 
 // Componetns
@@ -14,10 +14,12 @@ import ProductControlPanelLandingLoading from "./section/ProductControlPanelLand
 import CustomDialog from "../../utils/CustomDialog";
 // Icons
 import EditIcon from "@material-ui/icons/Edit";
+import DeleteIcon from "@material-ui/icons/Delete"
 import { IProduct } from "../../../types/interfaces";
 
 // Table Rows
 const tableRows = (products: IProduct[]) => {
+
   return products.map((row: IProduct, index: number) => (
     <tr
       key={row._id}
@@ -102,6 +104,13 @@ const tableRows = (products: IProduct[]) => {
         </NavLink>
       </td>
       {/* Edit Button End */}
+      <td className="rounded-r text-center">
+        <NavLink exact to={`${PRODUCT_CONTROL_PANEL}`}>
+          <button>
+            <DeleteIcon color="error" />
+          </button>
+        </NavLink>
+      </td>
     </tr>
   ));
 };
@@ -161,14 +170,14 @@ const ProductControlPanelLanding = () => {
                 Create Product
               </Button>
             </NavLink>
-            <Button
+            {/* <Button
               variant="outlined"
               color="secondary"
               className="mr-3 "
               onClick={handleDialogIsOpen}
             >
               Filter
-            </Button>
+            </Button> */}
           </div>
 
           {/* Content */}

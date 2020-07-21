@@ -14,6 +14,8 @@
   "author": "Mayank Khanna",
   "license": "MIT",
   "dependencies": {
+    "@stripe/react-stripe-js": "^1.1.2",
+    "@stripe/stripe-js": "^1.8.0",
     "async": "^3.2.0",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
@@ -26,7 +28,8 @@
     "mongoose": "^5.9.7",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
-    "react-charts": "^2.0.0-beta.7"
+    "react-charts": "^2.0.0-beta.7",
+    "react-stripe-checkout": "^2.6.3"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",

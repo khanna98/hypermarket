@@ -22,13 +22,13 @@ import {
 
 const billsCalculate = (items: any) => {
   let orderTotal: number = 0;
-  let deliveryFee: number = 80;
+  let deliveryFee: number = 50;
   let totalPayment: number = 0;
   if (items.length > 0) {
     items.forEach((item: any) => {
       orderTotal += item.quantity * item.price;
     });
-    if (orderTotal >= 200) deliveryFee = 0;
+    if (orderTotal >= 150) deliveryFee = 0;
     totalPayment = orderTotal + deliveryFee;
 
     return {
