@@ -4,6 +4,18 @@ This is a MERN Stack ecommerce website using Redux for State Management. This is
 
 This site is under regular development/construction and is not advised to be used for production.
 
+## Pre-requiste
+
+The following things are required for the proper working of the Application:
+
+1. Paypal Account: You can make a paypal account without adding bank/ card details and use the sandbox feature from the Paypal developers Dashboard.
+
+2. Node.js >= 10.0
+3. MongoDB / Mongo Atlas
+4. VS Code (All other code editors are stupid !)
+5. A good PC and will to make this application work
+6. This is the most important thing: PATIENCE !
+
 ---
 
 ## Getting Started
