@@ -71,15 +71,15 @@ Following is the structure that is available for the Admin.
 
 ```
 Admin
-	├── My Account
-	|	├── Cart
-	|	├── Orders / History of Order
-	|	├── Profile
-	|	└── Logout
-	├── Dashboard
-	|	├── User Dashboard / Dashboard to Manage Users
-	|	└── Products Dashboard / Dashboard to Manage Products
-	└── Home / Market
+  ├── My Account
+  |	  ├── Cart
+  |	  ├── Orders / History of Order
+  |	  ├── Profile
+  |	  └── Logout
+  ├── Dashboard
+  |	  ├── User Dashboard / Dashboard to Manage Users
+  |	  └── Products Dashboard / Dashboard to Manage Products
+  └── Home / Market
 ```
 
 ### User
@@ -101,9 +101,9 @@ The Guest user can browse the products, but needs to login/ signup to place an o
 
 ```
 Guest
-	├── Sign In
-  	├── Sign Up
-	└── Home / Market
+  ├── Sign In
+  ├── Sign Up
+  └── Home / Market
 ```
 
 ---
