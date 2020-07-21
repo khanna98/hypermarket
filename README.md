@@ -57,7 +57,7 @@ This React Application consists of 3 roles, i.e Admin, User and Guest. Lets talk
 
 Following is the structure that is available for the Admin.
 
-```bash
+```
 Admin
 	├── My Account
 	|	├── Cart
@@ -73,7 +73,7 @@ Admin
 ### User
 The following features will be available to the User
 
-```bash
+```
 User
   ├── My Account
   |	  ├── Cart
@@ -87,7 +87,7 @@ User
 
 The Guest user can browse the products, but needs to login/ signup to place an order.
 
-```bash
+```
 Guest
 	├── Sign In
   	├── Sign Up
@@ -98,7 +98,7 @@ Guest
 
 Following the structure of the repository for better understanding:
 
-```bash
+```
   .
   ├── client
   ├── config
